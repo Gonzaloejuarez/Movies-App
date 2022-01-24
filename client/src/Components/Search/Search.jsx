@@ -1,12 +1,13 @@
-import React from "react"
+import React from "react";
+
 
 export const Search = () => {
-return(
+  return(
     <div>
-        <input type="text" placeholder="Buscar peliculas"/>
-
+      <input type="text" name="" id="" />
+      <button>buscar</button>
     </div>
-)
+  )
 }
 
 export default Search

@@ -1,2 +1,0 @@
-export const ADD_MOVIES_API = "ADD_MOVIES_API";
-export const GET_DETAIL_MOVIE = "GET_DETAIL_MOVIE"

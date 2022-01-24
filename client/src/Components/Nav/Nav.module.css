@@ -1,5 +1,5 @@
 .divNav{
-    background-color: #1c1a23;
+    background-color: #413766;
     height: 15vh;
     padding-top: 1.9375rem;
     left: 0;
@@ -16,13 +16,32 @@
     display: flex;
     justify-content: space-around;
 
-    background-color: #28262e;
+    background-color: #342955;
     height: 3.75rem;
 }
 .navCostado{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
+    font-size: 2rem;
+    background:none;
+    color: white;
+}
+.nav_active{
+    left: 0;
+    transition: 350ms;
+}
+.nav_menu{
+    background-color: red;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    transition: 350ms;
 }
 .name{
     display: flex;

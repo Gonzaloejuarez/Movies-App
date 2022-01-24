@@ -1,8 +1,7 @@
 import React from 'react';
 import './App.css';
 import {Route} from 'react-router-dom'
-import {Home} from './Components/Home/Home'
-import {Search} from './Components/Search/Search'
+import Home from './Components/Home'
 import Nav from './Components/Nav/Nav';
 function App() {
   return (
@@ -13,7 +12,7 @@ function App() {
       */}
       <Nav />
       <Route exact path="/" component={Home}></Route>
-      <Route exact path="/movie/:id" component={Home}></Route>
+      
     </div>
   );
 }
