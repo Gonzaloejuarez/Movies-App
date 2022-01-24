@@ -1,34 +1,29 @@
 import axios from "axios";
 
-export const API = {
-  getMovieByTitle: async (title, cb) => {
-    try {
-      const response = await axios.get(
-        `http://www.omdbapi.com/?apikey=97fe16d&t=${title}`
-      );
-      cb(null, response.data);
-    } catch (error) {
-      cb(false);
+const apiKey = "97fe16d";
+const url = `https://www.omdbapi.com/?apikey=${apiKey}&`;
+
+export const getMovies = async (search) => {
+    if (search === '') {
+        return {};
     }
-  },
-  getAllMoviesBySearch: async (title, page = 1, cb) => {
     try {
-      const response = await axios.get(
-        `http://www.omdbapi.com/?apikey=97fe16d&s=${title}&page=${page}`
-      );
-      cb(null, response.data);
+        const searchUrl = url+'s='+search;
+        const movies = await axios.get(searchUrl);
+        return movies.data
     } catch (error) {
-      cb(false);
+        return error;
     }
-  },
-  getMovieDetails: async (movieId, cb) => {
+}
+
+export const dataMovie = async (imdbID) => {
     try {
-      const response = await axios.get(
-        `https://www.omdbapi.com/?apikey=97fe16d&i=${movieId}`
-      );
-      await cb(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  },
-};
+        const searchUrl = url+'i='+imdbID
+        const movie = await axios.get(searchUrl)
+        return movie.data
+    } catch(error) {
+        return error
+    }   
+}
+
+

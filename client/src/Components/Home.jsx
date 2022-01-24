@@ -1,21 +1,32 @@
-import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import SearchedMovies from './Movies'
+import React,{useContext, useState} from "react";
+import { dataMovie } from "../config/config";
+import { motion } from 'framer-motion';
+import { MoviesContext } from "../config/app_config";
+import style from './Home.module.css'
+import MovieModal from "./DetailMovies/MovieDetail";
+import Card from "./DetailMovies/MovieCard";
 
-const Home = () => {
-  const searchType = useSelector((state) => state.searchType);
-  const searchedMovies = useSelector((state) => state.searchedMovies);
+const Home = ({movies}) => {
+    let watchFlag = false;
+    const {userLists} = useContext(MoviesContext);
+    if(movies === undefined) {
+        if(userLists != null) movies = userLists.watchList;
+        watchFlag = true;
+    }
+    const [selectedMovie, setSelectedMovie] = useState(null)
+    const handleSelectedMovie = async (imdbID) => {
+        const fetchedMovie = await dataMovie(imdbID)
+        setSelectedMovie(fetchedMovie)
+    }
   return (
-    <div>
-      {Object.keys(searchedMovies).length > 1 ? (
-        <div>
-          {searchType === "s" && <SearchedMovies />}
-          
+    <div className={style.moviesGrid}>
+            {movies && movies.map((movie) => (
+                <motion.div layout>
+                    <Card key={movie.imdbID} title={movie.Title} year={movie.Year} poster={movie.Poster} handleSelectedMovie={handleSelectedMovie} imdbID={movie.imdbID} watchlist={watchFlag}/>
+                </motion.div>
+            ))}
+           {selectedMovie && <MovieModal selectedMovie={selectedMovie} setSelectedMovie={setSelectedMovie}/>}
         </div>
-      ) : (
-        <h1>Search For Movies!</h1>
-      )}
-    </div>
   );
 };
 

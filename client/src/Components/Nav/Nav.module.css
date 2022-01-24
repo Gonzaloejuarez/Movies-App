@@ -1,36 +1,63 @@
-.divNav{
-    background-color: #413766;
-    height: 15vh;
-    padding-top: 1.9375rem;
-    left: 0;
+:root {
+    --base: #161B33;
+    --font: rgb(230, 230, 230);
+    --light-base: #0f3748ff;
+    --red: #de3f57ff;
+    --yellow: #f7ea78ff;
+    --blue: rgb(51, 153, 197);
+  }
+
+
+.nav__item{
+    padding: 1rem;
+    padding-left: 3rem;
+    padding-right: 9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all .2s;
+    color: white;
+    text-decoration: none;
+}
+
+.navCostado2{
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 2rem;
+    background:none;
+    color: rgb(255, 255, 255);
 }
-.divNav2{
-    margin-top: 1.5625rem;
-    width: 100%;
-   
+.nav__item:hover{
+    color: var(--blue);
 }
-.nav{
-    display: flex;
-    justify-content: space-around;
 
-    background-color: #342955;
-    height: 3.75rem;
+.nav__icon {
+    margin-right: 1rem;
+}
+
+.nav__item__selected{
+    color: var(--font);
+    border-right: 6px solid var(--blue);
 }
 .navCostado{
+    margin-top: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 2rem;
     font-size: 2rem;
     background:none;
-    color: white;
+    color: rgb(0, 0, 0);
 }
 .nav_active{
     left: 0;
     transition: 350ms;
+}
+.nav_ul{
+    display: flex;
+    flex-direction: column;
 }
 .nav_menu{
     background-color: red;

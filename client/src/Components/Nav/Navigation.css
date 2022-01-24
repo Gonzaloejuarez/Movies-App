@@ -1,14 +1,15 @@
 .nav-menu{
-    background-color: rgb(74, 74, 88);
-    width: 180px;
-    height: 100vh;
-    margin-top: 66px;
+    background-color: #161B33;
+    height: 118.5rem;
     display: flex;
     justify-content: center;
-    position: fixed;
     top: 0;
     left: -100%;
     transition: 350ms;
+    position: fixed;
+    z-index: 10;
+    width: 15%;
+    
 }
 .probando{
     display: flex;
