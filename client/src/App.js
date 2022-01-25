@@ -6,6 +6,7 @@ import Nav from './Components/Nav/Nav';
 import {  MoviesProvider } from './config/app_config';
 import { getMovies } from './config/config';
 import Search from './Components/Search/Search';
+import MovieModal from './Components/DetailMovies/MovieDetail';
 function App() {
 
   const [searchedMovies, setSearchedMovies] = useState({});

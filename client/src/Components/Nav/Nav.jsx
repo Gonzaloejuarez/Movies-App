@@ -4,7 +4,7 @@ import style from './Nav.module.css';
 import './Navigation.css';
 import { BiMovie, BiShow, BiListCheck } from "react-icons/bi";
 import { Link, useLocation } from 'react-router-dom';
-import { UilAlignJustify, UilTimesSquare } from '@iconscout/react-unicons'
+import { UilAlignJustify, UilTimesSquare , UilClapperBoard, UilEye, UilClipboardNotes  } from '@iconscout/react-unicons'
 import { getMovies } from "../../config/config";
 
 export const Nav = () => {
@@ -30,21 +30,21 @@ export const Nav = () => {
                         </Link> 
                         </li>
                         <li>
-                            <Link to="/" className={(location == "/" ? activeLinkStyle : linkStyle)}>
-                            <BiMovie className={style.nav__icon}/>
-                            <span className={style.Span_Nav}>inicio</span>
+                            <Link to="/" className={linkStyle}>
+                            <UilClapperBoard className={style.nav__icon}/>
+                            <span >Inicio</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/porVer" className={(location == "/porVer" ? activeLinkStyle : linkStyle)}>
-                            <BiShow className={style.nav__icon}/>
-                            <span className={style.Span_Nav}>Por Ver</span>
+                            <Link to="/porVer" className={linkStyle}>
+                            <UilEye  className={style.nav__icon}/>
+                            <span>Por Ver</span>
                             </Link>
                         </li>
                         <li>
-                            <Link to="/MiLista" className={(location == "/MiLista" ? activeLinkStyle : linkStyle)}>
-                            <BiListCheck className={style.nav__icon}/>
-                            <span className={style.Span_Nav}>Mi Lista</span>
+                            <Link to="/MiLista" className={linkStyle}>
+                            <UilClipboardNotes  className={style.nav__icon}/>
+                            <span>Mi Lista</span>
                             </Link>
                         </li>
                     </ul>
