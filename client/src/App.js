@@ -1,12 +1,13 @@
-import React, {useState} from 'react';
 import './App.css';
+import React, {useState} from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './Components/Home';
-import Nav from './Components/Nav/Nav';
 import {  MoviesProvider } from './config/app_config';
 import { getMovies } from './config/config';
 import Search from './Components/Search/Search';
-import MovieModal from './Components/DetailMovies/MovieDetail';
+import Home from './Components/Home';
+import Nav from './Components/Nav/Nav';
+import MovieFavoritas from './Components/Movies/MoviesFav/Movies_list';
+import SeeMovies from './Components/Movies/MoviesView/SeeMovies';
 function App() {
 
   const [searchedMovies, setSearchedMovies] = useState({});
@@ -30,13 +31,8 @@ function App() {
           <Search handleSearch={handleSearch}/>
           <Home movies={searchedMovies.Search ? searchedMovies.Search : []}/>
           </Route>
-          <Route path="/porVer">
-
-          </Route>
-
-          <Route path="/MiLista">
-
-          </Route>
+          <Route path="/porVer" component={SeeMovies }></Route>
+          <Route path="/lista" component={MovieFavoritas}></Route>
         </Switch>
           </div>
       </Router>

@@ -27,7 +27,7 @@ body {
   font-size: 2rem;
   font-family: 'Source Sans Pro', sans-serif;
   color: var(--font);
-  background: rgb(36,49,103);
+  background-color: #223143;;
   /* background: linear-gradient(180deg, rgba(36,49,103,0.97) 0%, rgba(22,27,51,0.97) 100%); */
 }
 
@@ -43,35 +43,6 @@ body {
   justify-content: space-between;
 }
 
-.radialProgressBar {
-  border-radius: 50%;
-  width: 10rem;
-  height: 10rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background: #ddd;
-  margin: 0 auto;
-  margin-bottom: 1rem;
-}
-
-.progress49{
-  background-image: linear-gradient(calc(90deg - 360deg*var(--val)/100), #ddd 50%, transparent 50%), linear-gradient(90deg, rgb(51, 153, 197) 50%, #ddd 50%);
-}
-
-.progress51 {
-  background-image: linear-gradient(90deg, rgb(51, 153, 197) 50%, transparent 50%), linear-gradient(calc(270deg - 360deg*var(--val)/100), rgb(51, 153, 197) 50%, #ddd 50%);
-}
-
-.radialProgressBar .overlay {
-  border-radius: 50%;
-  width: 8rem;
-  height: 8rem;
-  margin: auto;
-  background-color: #1e2446;
-  text-align: center;
-  padding-top: 30%;
-}
 
 .tooltip {
   position: relative;

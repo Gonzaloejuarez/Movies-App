@@ -1,6 +1,6 @@
 import { useState } from "react"
 import {FaStar} from "react-icons/fa"
-
+import style from './Validation.module.css'
 const StarsRating = ({ setRatedMovie, userRating }) => {
     const [rating, setRating] = useState(userRating);
     const [hoverRating, setHoverRating] = useState(null);
@@ -14,7 +14,7 @@ const StarsRating = ({ setRatedMovie, userRating }) => {
         }
     } 
     return (
-        <div >
+        <div className={style.divStar}>
             {[...Array(10)].map((_,i)=> {
             const starValue = i + 1;
             return (
@@ -22,8 +22,8 @@ const StarsRating = ({ setRatedMovie, userRating }) => {
                     onMouseEnter={()=>setHoverRating(starValue)}
                     onMouseLeave={()=>setHoverRating(null)}>
                     <FaStar 
-                        color={starValue <= (hoverRating || rating) && "#3399c5"}
-                        
+                         color={starValue <= (hoverRating || rating) && "rgb(229, 233, 0)"}
+                         className={starValue <= hoverRating && style.starHover}
                         />
                     
                     <input value={starValue} type="radio" 

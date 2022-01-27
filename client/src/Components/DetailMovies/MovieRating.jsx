@@ -1,6 +1,6 @@
 import styles from "./MovieDetails.module.css"
 import { motion } from "framer-motion";
-
+import '../Css/rating.css'
 const MovieRatings = ({ movieRatings }) => {
     const ratings = movieRatings.map((rating) => {
         if (rating.Source === "Rotten Tomatoes"){
@@ -26,7 +26,7 @@ const MovieRatings = ({ movieRatings }) => {
                 transition={{ delay: 0.5 }}
                 >
                     <div 
-                    className={"radialProgressBar " + (rating.value > 50 ? "progress51" : "progress49")} 
+                    className={ "radialProgressBar "  + (rating.value > 50 ? "blue50" : "white49")} 
                     style={{"--val": rating.value}}>
                         <div class="overlay">{rating.value}</div>
                     </div>

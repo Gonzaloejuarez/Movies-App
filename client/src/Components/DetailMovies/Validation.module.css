@@ -1,0 +1,20 @@
+.divStar {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.divStar label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    padding: 0.5rem;
+}
+
+.divStar label input[type="radio"]{
+    display: none;
+}
+
+.starHover {
+    transform: scale(1.25);
+    transition: all .2s;
+}

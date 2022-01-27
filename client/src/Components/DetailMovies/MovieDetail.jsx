@@ -5,8 +5,8 @@ import { useContext } from 'react';
 import { BiShow } from 'react-icons/bi';
 import {BiListPlus} from 'react-icons/bi';
 import MovieRatings from './MovieRating';
-/* import ListsSelection from './ListsSelection'; */
-/* import StarsRating from './StarsRating'; */
+import ListsSelection from './List';
+import StarsRating from './Stars';
 import { MoviesContext } from '../../config/app_config';
 
 const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
@@ -29,7 +29,7 @@ const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}} >
             <motion.div className={styles.movieModal} initial={{ y: "-100vh" }} animate={{ y: 0 }}>
-                <img src={`https://img.omdbapi.com/?apikey=54a757e3&i=${selectedMovie.imdbID}&h=1000`} alt="" className={styles.movieModalPoster}/>
+                <img src={`https://img.omdbapi.com/?apikey=97fe16d&i=${selectedMovie.imdbID}&h=1000`} alt="" className={styles.movieModalPoster}/>
                 <div className={styles.movieModalInfo}>
                     <div className={styles.movieModalHeader}>
                         <h1>{selectedMovie.Title}</h1>
@@ -40,7 +40,7 @@ const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
                             </div>  
                             <span className="tooltiptext">{isInList(selectedMovie.imdbID, "watchList") ? "Quitar de Por ver" : "Agregar a Por ver"}</span>
                         </div>
-                        <div className="tooltip">
+                        <div className="tooltip ">
                             <div className="tooltipItem" onClick={() => setAddToList(true)}>
                                 <BiListPlus className={styles.movieModalHeaderIcon}/>
                             </div>  
@@ -56,7 +56,7 @@ const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
                         ))}
                     </div>
 
-                    {/* <StarsRating setRatedMovie={setRatedMovie} userRating={rating}/> */}
+                    <StarsRating setRatedMovie={setRatedMovie} userRating={rating}/>
 
                     <div className={styles.movieModalPlot}>
                         <p>
@@ -71,7 +71,7 @@ const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
                      <MovieRatings movieRatings={selectedMovie.Ratings}/>
                 </div>
             </motion.div>
-            {/* {addToList && <ListsSelection setAddToList={setAddToList} movie={selectedMovie}/>} */}
+            {addToList && <ListsSelection setAddToList={setAddToList} movie={selectedMovie}/>}
         </motion.div>
     )
 }

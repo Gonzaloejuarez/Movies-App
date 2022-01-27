@@ -1,0 +1,33 @@
+.radialProgressBar {
+    border-radius: 50%;
+    width: 10rem;
+    height: 10rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background: #ddd;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+
+
+ 
+.white49{
+    background-image: linear-gradient(calc(90deg - 360deg*var(--val)/100), #ddd 50%, transparent 50%), linear-gradient(90deg, rgb(51, 153, 197) 50%, #ddd 50%);
+  }
+  
+.blue50 {
+    background-image: linear-gradient(90deg, rgb(51, 153, 197) 50%, transparent 50%), linear-gradient(calc(270deg - 360deg*var(--val)/100), rgb(51, 153, 197) 50%, #ddd 50%);
+  }
+   
+
+  .radialProgressBar .overlay {
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    margin: auto;
+    background-color: #1e2446;
+    text-align: center;
+    padding-top: 30%;
+  }
+  

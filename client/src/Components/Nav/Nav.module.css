@@ -7,7 +7,12 @@
     --blue: rgb(51, 153, 197);
   }
 
-
+.icon{
+    width: 9rem;
+    height: 5rem;
+    font-size: 20rem;
+    
+}
 .nav__item{
     padding: 1rem;
     padding-left: 3rem;
@@ -27,6 +32,7 @@
     align-items: center;
     margin-left: 2rem;
     background:none;
+    font: 20rem;
     color: rgb(255, 255, 255);
 }
 .nav__item:hover{
@@ -47,7 +53,6 @@
     justify-content: center;
     align-items: center;
     margin-left: 2rem;
-    font-size: 2rem;
     background:none;
     color: rgb(255, 255, 255);
     position: fixed;
@@ -71,4 +76,48 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.listas{
+    text-decoration: none;
+    list-style: none;
+}
+.nav_ul > li {
+    list-style: none;
+}
+.linkStyle{
+    display: flex;
+    text-decoration: none;
+}
+.linkStyle > span{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    transition: 0.2s;
+}
+
+.linkStyle > span:hover{
+    color: var(--blue);
+    transition: 0.2s;
+}
+
+
+.DivListas{
+    /* background-color: violet; */
+    flex-direction: column;
+    display: grid;
+    justify-content: center;
+    margin-top: 3rem;
+    align-items: center;
+    font-size: 30px;
+    list-style: none;
+    padding: 1px 3px 4px;
+    margin-right: 4rem;
+    height: 20rem;
+    width: 15rem;
+}
+.iconoCostado{
+    font-size: 20%;
+    background-color: transparent;
+    
 }
