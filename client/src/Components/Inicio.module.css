@@ -1,0 +1,56 @@
+.InicioDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+
+/* .InicioSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100rem;
+    height: 40rem;
+    background-color: aqua;
+} */
+
+.InicioSection h1{
+color: black;
+}
+
+.imagen_proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100rem;
+    height: 40rem;
+    transition: 2s;
+}
+
+.slide {
+    opacity: 0;
+    transition-duration: 3s ease;
+  }
+  
+  .slide.active {
+    opacity: 1;
+    transition-duration: 3s;
+  }
+
+  .right_arrow {
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    user-select: none;
+    z-index: 20;
+}
+
+.left_arrow {
+    left: 4rem;
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    user-select: none;
+    z-index: 20;
+}

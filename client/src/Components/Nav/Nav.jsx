@@ -9,7 +9,7 @@ import { getMovies } from "../../config/config";
 
 export const Nav = () => {
 
-    const [user, setUser] = useState(true);
+    const [user, setUser] = useState(false);
     const handleFunction = () => setUser(!user)
     return(
         <div >

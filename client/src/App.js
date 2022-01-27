@@ -3,6 +3,9 @@ import React, {useState} from 'react';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import {  MoviesProvider } from './config/app_config';
 import { getMovies } from './config/config';
+
+//importaciones de componentes
+import InicioComponente from './Components/Inicio';
 import Search from './Components/Search/Search';
 import Home from './Components/Home';
 import Nav from './Components/Nav/Nav';
@@ -28,8 +31,9 @@ function App() {
           <div>
         <Switch>
           <Route exact path="/">
-          <Search handleSearch={handleSearch}/>
-          <Home movies={searchedMovies.Search ? searchedMovies.Search : []}/>
+          <InicioComponente />
+          {/* <Search handleSearch={handleSearch}/> */}
+          <Home handleSearch={handleSearch} movies={searchedMovies.Search ? searchedMovies.Search : []}/>
           </Route>
           <Route path="/porVer" component={SeeMovies }></Route>
           <Route path="/lista" component={MovieFavoritas}></Route>
