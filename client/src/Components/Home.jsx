@@ -6,6 +6,7 @@ import style from './Home.module.css'
 import MovieModal from "./DetailMovies/MovieDetail";
 import Card from "./DetailMovies/MovieCard";
 import Search from "./Search/Search";
+import Pelicugon from '../utils/images/PelicuGon.png'
 
 const Home = ({movies, handleSearch}) => {
     let watchFlag = false;
@@ -22,7 +23,7 @@ const Home = ({movies, handleSearch}) => {
   return (
     <div className={style.divHome}>
       <section className={style.sectionHome}>
-        <h1>Descubre</h1>
+        <img src={Pelicugon} />
         <Search handleSearch={handleSearch}/>
       </section>
 

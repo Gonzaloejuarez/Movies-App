@@ -17,11 +17,15 @@
     align-items: center;
 } */
 .sectionHome{
-    margin-top: 2rem;
+    margin-top: 4rem;
     display: flex;
     justify-content: space-evenly;
 }
 
 .sectionHome h1 {
     font-size: 5rem;
+}
+
+.sectionHome img {
+    height: 5rem;
 }
