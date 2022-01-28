@@ -54,3 +54,20 @@ color: black;
     user-select: none;
     z-index: 20;
 }
+
+@media (max-width : 1024px){
+    .imagen_proyectos{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70rem;
+        height: 30rem;
+        transition: 2s;
+    }
+    .InicioDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+}

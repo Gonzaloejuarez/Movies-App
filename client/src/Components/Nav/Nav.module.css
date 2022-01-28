@@ -41,7 +41,13 @@
 
 .nav__icon {
     margin-right: 1rem;
+    color: white;
 }
+.nav__icon:hover {
+    margin-right: 1rem;
+    color: rgb(6, 56, 194);
+}
+
 
 .nav__item__selected{
     color: var(--font);
@@ -65,6 +71,9 @@
 .nav_ul{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20rem;
+    margin-left: 4rem;
 }
 .name{
     display: flex;
@@ -105,8 +114,8 @@
 .DivListas{
     /* background-color: violet; */
     flex-direction: column;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     margin-top: 3rem;
     align-items: center;
     font-size: 30px;
@@ -121,3 +130,15 @@
     background-color: transparent;
     
 }
+
+
+.nav_ul > li {
+    list-style: none;
+}
+
+@media (max-width : 1024px){
+
+
+}
+
+

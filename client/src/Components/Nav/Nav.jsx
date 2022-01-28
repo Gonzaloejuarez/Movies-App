@@ -9,7 +9,7 @@ import { getMovies } from "../../config/config";
 
 export const Nav = () => {
 
-    const [user, setUser] = useState(false);
+    const [user, setUser] = useState(true);
     const handleFunction = () => setUser(!user)
     return(
         <div >
@@ -20,28 +20,27 @@ export const Nav = () => {
                    <UilAlignJustify onClick={handleFunction}/>
                 </Link>
                 <nav className={user ? "nav-menu active" : "nav-menu"}>
-                    <ul className={style.nav_ul} onClick={handleFunction}>
-                        <li className="navbar-togle">
+                    <ul className={style.nav_ul} /* onClick={handleFunction} */>
+                        {/* <li className="navbar-togle">
                         <Link to="#" className={style.navCostado}>
                             <UilAngleLeft className={style.icon}/>
                         </Link> 
-                        </li>
+                        </li> */}
                         <div className={style.DivListas}>
                         <li>
                             <Link to="/" className={style.linkStyle}>
-                           {/*  <UilClapperBoard className={style.nav__icon}/> */}
-                            <span >Inicio</span>
+                            <UilClapperBoard className={style.nav__icon}/>
                             </Link>
                         </li>
                         <li>
                             <Link to="/porVer" className={style.linkStyle}>
-                            {/* <UilEye  className={style.nav__icon}/> */}
-                            <span>Por Ver</span>
+                            <UilEye  className={style.nav__icon}/>
+                            {/* <span>Por Ver</span> */}
                             </Link>
                         </li>
                         <li>
                             <Link to="/lista" className={style.linkStyle}>
-                            <span>Mi Lista</span>
+                            <UilClipboardNotes className={style.nav__icon}/>
                             </Link>
                         </li>
                         </div>

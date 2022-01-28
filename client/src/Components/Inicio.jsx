@@ -39,9 +39,9 @@ export const InicioComponente = () => {
                                 </div>
                               );
                             })}
-            </section>
                             <FaArrowAltCircleLeft className={style.left_arrow}  onClick={prevSlide} />
                             <FaArrowAltCircleRight className={style.right_arrow}   onClick={nextSlide} />
+            </section>
         </div>
     )
     

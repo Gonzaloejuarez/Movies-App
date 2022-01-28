@@ -31,3 +31,21 @@
     justify-content: center;
     align-items: center;
 }
+
+
+@media (max-width : 1024px){
+
+    .nav-menu{
+        background-color: #141a32;
+        height: 118.5rem;
+        display: flex;
+        justify-content: center;
+        top: 0;
+        left: -100%;
+        transition: 350ms;
+        position: fixed;
+        z-index: 10;
+        width: 5rem;
+        
+    } 
+}
