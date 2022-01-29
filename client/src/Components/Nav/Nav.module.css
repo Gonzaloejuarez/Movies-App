@@ -42,10 +42,12 @@
 .nav__icon {
     margin-right: 1rem;
     color: white;
+    transition: 0.2s;
 }
 .nav__icon:hover {
     margin-right: 1rem;
-    color: rgb(6, 56, 194);
+    color: var(--blue);
+    transition: 0.2s;
 }
 
 
@@ -73,7 +75,7 @@
     flex-direction: column;
     justify-content: space-between;
     margin-top: 20rem;
-    margin-left: 4rem;
+    margin-left: 5.5rem;
 }
 .name{
     display: flex;
@@ -137,7 +139,13 @@
 }
 
 @media (max-width : 1024px){
-
+    .nav_ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 20rem;
+        margin-left: 4rem;
+    }
 
 }
 

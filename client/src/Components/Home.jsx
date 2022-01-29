@@ -22,11 +22,6 @@ const Home = ({movies, handleSearch}) => {
     }
   return (
     <div className={style.divHome}>
-      <section className={style.sectionHome}>
-        <img src={Pelicugon} />
-        <Search handleSearch={handleSearch}/>
-      </section>
-
         <div className={style.moviesGrid}>
             {movies && movies.map((movie) => (
                 <motion.div layout>

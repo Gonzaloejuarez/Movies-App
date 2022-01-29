@@ -11,6 +11,9 @@ import Home from './Components/Home';
 import Nav from './Components/Nav/Nav';
 import MovieFavoritas from './Components/Movies/MoviesFav/Movies_list';
 import SeeMovies from './Components/Movies/MoviesView/SeeMovies';
+import Pelicugon from './utils/images/PelicuGon.png'
+import style from './Components/Home.module.css'
+
 function App() {
 
   const [searchedMovies, setSearchedMovies] = useState({});
@@ -32,6 +35,10 @@ function App() {
         <Switch>
           <Route exact path="/">
           <InicioComponente />
+          <section className={style.sectionHome}>
+            <img src={Pelicugon} />
+          <Search handleSearch={handleSearch}/>
+          </section>
           {/* <Search handleSearch={handleSearch}/> */}
           <Home handleSearch={handleSearch} movies={searchedMovies.Search ? searchedMovies.Search : []}/>
           </Route>
