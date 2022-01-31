@@ -1,13 +1,11 @@
-import styles from './MovieDetails.module.css'
-import {useState} from "react";
+import React , {useState, useContext} from "react";
 import { motion } from 'framer-motion';
-import { useContext } from 'react';
-import { BiShow } from 'react-icons/bi';
-import {BiListPlus} from 'react-icons/bi';
+import {BiListPlus , BiShow} from 'react-icons/bi';
 import MovieRatings from './MovieRating';
 import ListsSelection from './List';
 import StarsRating from './Stars';
 import { MoviesContext } from '../../config/app_config';
+import styles from './MovieDetails.module.css'
 
 const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
     const [addToList, setAddToList] = useState(false);
@@ -40,24 +38,26 @@ const MovieModal = ({ selectedMovie, setSelectedMovie }) => {
                             </div>  
                             <span className="tooltiptext">{isInList(selectedMovie.imdbID, "watchList") ? "Quitar de Por ver" : "Agregar a Por ver"}</span>
                         </div>
-                        <div className="tooltip ">
+                        <div className="tooltip">
                             <div className="tooltipItem" onClick={() => setAddToList(true)}>
                                 <BiListPlus className={styles.movieModalHeaderIcon}/>
                             </div>  
                             <span className="tooltiptext">Agregar a Lista</span>
                         </div>
                     </div>
+                    <section className={styles.movieDetailsDiv}>
                     <span className={styles.movieModalDetails}>
                         {[selectedMovie.Year, selectedMovie.Runtime, selectedMovie.Language, selectedMovie.Rated].join(' / ')}
                     </span>
+                    </section>
                     <div className={styles.movieModalGenres}>
                         {selectedMovie.Genre.split(', ').map((genre) => (
                             <span className={styles.movieModalGenre} >{genre}</span>
                         ))}
                     </div>
-
+                    <div className={styles.StarDiv}>
                     <StarsRating setRatedMovie={setRatedMovie} userRating={rating}/>
-
+                    </div>
                     <div className={styles.movieModalPlot}>
                         <p>
                             {selectedMovie.Plot}

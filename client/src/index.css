@@ -49,6 +49,7 @@ body {
   display: inline-block;
   cursor: pointer;
   white-space: nowrap;
+  margin-right: 1.5rem;
 }
 
 .tooltipItem {

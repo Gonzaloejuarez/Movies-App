@@ -24,6 +24,7 @@
 
 .movieModalPoster {
     width: 35%;
+    margin-left: 4rem;
     object-fit: cover;
     -webkit-box-shadow: 9px 0px 44px -12px rgba(0,0,0,0.73);
     -moz-box-shadow: 9px 0px 44px -12px rgba(0,0,0,0.73);
@@ -118,3 +119,134 @@
     cursor: pointer;
     white-space: nowrap;
   }
+
+
+@media (max-width : 1024px){
+    .movieModalBackdrop {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.527);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 20;
+        /* margin-left: 11.2rem; */
+    }
+    .movieModal {
+        width: 100%;
+        height: 80%;
+        display: flex;
+        cursor: auto;
+        background-color: #1e2446 ;
+        overflow: hidden;
+    }
+    .movieModalPoster {
+        width: 30%;
+        margin-left: 4rem;
+        object-fit: cover;
+        -webkit-box-shadow: 9px 0px 44px -12px rgba(0,0,0,0.73);
+        -moz-box-shadow: 9px 0px 44px -12px rgba(0,0,0,0.73);
+        box-shadow: 9px 0px 44px -12px rgba(0,0,0,0.73);
+    }
+    .movieModalInfo {
+        padding: 2rem;
+        width: 65%;
+    }
+    
+    .movieModalHeader {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        gap: 3rem;
+    }
+    
+    .movieModalHeader h1{
+        font-size: 3rem;
+        font-weight: 600;
+        width: 700%;
+    }
+    
+    .movieModalHeaderIcon {
+        cursor: pointer;
+        /* height: 20rem; */
+    }
+    
+    .movieDetailsDiv{
+        margin-top: 5px;
+    }
+    .movieModalDetails {
+        color: rgb(255, 255, 255);
+        font-weight: 200;
+        letter-spacing: 0.2rem;
+    }
+    
+    .movieModalGenres {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 2rem;
+    }
+    
+    .movieModalGenre {
+        background-color: rgba(255, 255, 255, 0.116);
+        padding: 0.5rem 1rem;
+        margin-right: 1rem;
+        border-radius: 200px;
+        border: solid rgba(255, 255, 255, 0.445) 1px;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1.5rem;
+    }
+    
+    .movieModalGenre:hover {
+        transform: scale(1.05);
+        transition: all .2s;
+    }
+    
+    .movieModalPlot {
+        margin-top: -2rem;
+    }
+    
+    .movieModalPeople {
+        display: flex;
+        flex-direction: column;
+        color: rgb(165, 164, 164);
+        font-size: 2rem;
+        font-weight: 200;
+        margin-bottom: 5rem;
+    }
+    
+    .movieModalRatings {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        text-align: center;
+    }   
+    
+    
+    .radialProgressBar {
+        border-radius: 50%;
+        width: 10rem;
+        height: 10rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        background: #ddd;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+      }
+    
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+      .StarDiv{
+          margin-top: -0.5rem;
+      }
+}

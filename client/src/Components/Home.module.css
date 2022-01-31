@@ -7,15 +7,15 @@
     width: 70%;
     justify-content: center;
     align-items: center;
-    margin-left: 28rem;
-    margin-top: 5rem;
+    margin-left: 3.5rem;
+    margin-top: 5rem; 
 }
-/* .divHome{
+.divHome{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
+}
 .sectionHome{
     margin-top: 4rem;
     display: flex;
@@ -41,7 +41,13 @@
         width: 70%;
         justify-content: center;
         align-items: center;
-        margin-left: 22rem;
+        margin-left: 15rem;
         margin-top: 5rem;
+    }
+    .divHome{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }

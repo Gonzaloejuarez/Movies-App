@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
-import { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import {MoviesContext} from '../../config/app_config'
 import { FaPlus } from 'react-icons/fa';
-import styles from './List.module.css'
+import styles from './List.module.css';
+
+
 const ListsSelection = ({setAddToList, movie}) => {
     const {userLists, toggleMovie, isInList, createList} = useContext(MoviesContext);
     const newList = useRef("");
