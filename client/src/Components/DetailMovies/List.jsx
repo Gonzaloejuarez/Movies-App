@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
 import React, { useContext, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import {MoviesContext} from '../../config/app_config'
 import { FaPlus } from 'react-icons/fa';
 import styles from './List.module.css';
@@ -9,6 +9,7 @@ const ListsSelection = ({setAddToList, movie}) => {
     const {userLists, toggleMovie, isInList, createList} = useContext(MoviesContext);
     const newList = useRef("");
     const [error,setError] = useState(false);
+
     const handleClick = (e) => {
         if (e.target.classList.contains(styles.ListsSelectionBackdrop)) {
           setAddToList(false);
@@ -24,13 +25,13 @@ const ListsSelection = ({setAddToList, movie}) => {
         }           
     }
     return (
-        <motion.div onClick={handleClick} 
+        <motion.div className={styles.ListsSelectionBackdrop} onClick={handleClick} 
         initial={{ opacity: 0 }} 
         animate={{ opacity: 1 }}
         exit={{ opacity: 0}} >
-            <motion.div initial={{ y: "-100vh" }} animate={{ y: 0 }}>
+            <motion.div className={styles.ListsModal} initial={{ y: "-100vh" }} animate={{ y: 0 }}>
                 <h1>Agregar a lista:</h1>
-                <div>
+                <div className={styles.Lists}>
                     {Object.keys(userLists).map((list) => (
                         <label className={styles.container}>{list == "watchList" ? "Por ver" : list}
                             <input type="checkbox"
