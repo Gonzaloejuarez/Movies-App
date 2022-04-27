@@ -41,8 +41,8 @@ const sig = () => {
 		 src={require(`../utils/images/${selectedImagen}`) } 
 		 alt='imagen'/>
 		 <CarouselButtonContainer>
-		 <CarouselButton onClick={previo}>{"<"}</CarouselButton>
-		 <CarouselButton onClick={sig}>{">"}</CarouselButton>
+		 {/* <CarouselButton onClick={previo}>{"<"}</CarouselButton>
+		 <CarouselButton onClick={sig}>{">"}</CarouselButton> */}
 		 </CarouselButtonContainer>
 			</section>
 		</div>

@@ -1,57 +1,65 @@
 import React, {useState}from "react";
-import Search from "../Search/Search";
-import style from './Nav.module.css';
 import './Navigation.css';
-import { BiMovie, BiShow, BiListCheck } from "react-icons/bi";
-import { Link, useLocation } from 'react-router-dom';
-import { UilAlignJustify, UilTimesSquare , UilClapperBoard, UilEye, UilClipboardNotes , UilAngleLeft  } from '@iconscout/react-unicons'
-import { getMovies } from "../../config/config";
+/* import style from './Nav.module.css'; */
+import { Link} from 'react-router-dom';
+import { UilAlignJustify , UilAngleLeft  } from '@iconscout/react-unicons';
+import Sidebar from "../../utils/Nav";
+
 
 export const Nav = () => {
-
-    const [user, setUser] = useState(true);
-    const handleFunction = () => setUser(!user)
+    const [user, setUser] = useState(false);
+    
+    const handleFunction = () => setUser(!user);
+    
     return(
-        <div >
-            <div className={style.divNav2}>
-            <div className={style.nav}>
-                <div className="probando">
-                <Link to="#" className={style.navCostado} >
+        <>
+            <div className='navBar'>
+                <div className='iconLibrerys'>
+                <Link to="#" className='navCostado' onClick={handleFunction} >
                    <UilAlignJustify onClick={handleFunction}/>
                 </Link>
-                <nav className={user ? "nav-menu active" : "nav-menu"}>
-                    <ul className={style.nav_ul} /* onClick={handleFunction} */>
-                        {/* <li className="navbar-togle">
-                        <Link to="#" className={style.navCostado}>
-                            <UilAngleLeft className={style.icon}/>
-                        </Link> 
-                        </li> */}
-                        <div className={style.DivListas}>
-                        <li>
-                            <Link to="/" className={style.linkStyle}>
-                            <UilClapperBoard className={style.nav__icon}/>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/porVer" className={style.linkStyle}>
-                            <UilEye  className={style.nav__icon}/>
-                            {/* <span>Por Ver</span> */}
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/lista" className={style.linkStyle}>
-                            <UilClipboardNotes className={style.nav__icon}/>
-                            </Link>
-                        </li>
-                        </div>
-                    </ul>
-                </nav>
                 </div>
-
+                <nav className={user ? "nav-menu active" : "nav-menu"}> 
+                    <Link to="#" className='navCostado' onClick={handleFunction}>
+                        <UilAngleLeft className='icon'/>
+                    </Link>
+                    <div className="nuevo">
+                    <ul className="menu_bars">
+                        {Sidebar.map( (item, index)=> {
+                            return(
+                                <li key={index} className={item.cName}>
+                                    <Link to={item.path}>
+                                    <a>{item.icon}
+                                    <span>{item.Title}</span>    
+                                    </a>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </div> 
+                </nav>
             </div>
-            </div>
-        </div>
+        </>
     )
 }
 
 export default Nav
+{/* <li className={style.liItems}>
+    <Link to="/" className={style.linkStyle}>
+    <UilClapperBoard className={style.nav__icon}/>
+    <p>Inicio</p>
+    </Link>
+</li>
+<li className={style.liItems}>
+    <Link to="/porVer" className={style.linkStyle}>
+    <UilEye  className={style.nav__icon}/>
+    <p>Por Ver</p>
+    </Link>
+</li>
+<li className={style.liItems}>
+    <Link to="/lista" className={style.linkStyle}>
+    <UilClipboardNotes className={style.nav__icon}/>
+    <p>Mi lista</p>
+    </Link>
+</li> */}

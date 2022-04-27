@@ -1,17 +1,47 @@
 .nav-menu{
     background-color: #141a32;
     height: 118.5rem;
-    display: flex;
-    justify-content: center;
     top: 0;
     left: -100%;
-    transition: 350ms;
+    transition: 500ms;
+    justify-content: center;
     position: fixed;
     z-index: 10;
-    width: 6rem;
+    display: flex;
+    width: 20rem;
+}
+.nav-menu-items{
+    width: 100%;
+}
+
+
+.navBar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.icon{
+    width: 9rem;
+    height: 5rem;
+    font-size: 20rem;
     
 }
-.probando{
+
+.navCostado{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+    background:none;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    z-index: 10;
+}
+
+
+.iconLibrerys{
     display: flex;
     justify-content: initial;
     align-items: center;
@@ -23,29 +53,76 @@
 .nav-menu-items{
     width: 100%;
 }
+.nuevo{
+    margin-top: 20rem;
+}
 .navbar-togle{
     background-color: transparent;
-    width: 100%;
-    height: 80px;
+    /* width: 100%; */
+    /* height: 80px; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.nav_item {
+    display: flex;
+    color: white;
+    justify-content: start;
+    align-items: center;
+    padding: 8px 0px 8px 0px;
+    list-style: none;
+    margin-right: 2.7rem;
+    width: 110%;
+    height: 70px;
+}
+
+.nav_item a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 0 16px;
+    width: 92%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: 150ms;
+}
 
 
-@media (max-width : 1024px){
+.nav_item a:hover{
+    background-color: rgb(104, 197, 166);
+    border-radius: 4px;
+    transition: 100ms;
+}
 
+
+@media (min-width : 768px){
     .nav-menu{
         background-color: #141a32;
-        height: 118.5rem;
-        display: flex;
-        justify-content: center;
+        height: 100%;
         top: 0;
         left: -100%;
-        transition: 350ms;
+        transition: 500ms;
+        justify-content: center;
         position: fixed;
         z-index: 10;
-        width: 5rem;
-        
+        display: flex;
+        width: 20rem;
     } 
+
+}
+
+@media (max-width : 768px){
+    .nav-menu{
+        background-color: #141a32;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        transition: 500ms;
+        justify-content: center;
+        position: fixed;
+        z-index: 10;
+        display: flex;
+        width: 20rem;
+    }
 }

@@ -7,21 +7,49 @@
     --blue: rgb(51, 153, 197);
   }
 
+
+.navBar{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.iconLibrerys{
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+}
+
+.nav-menu{
+    background-color: #141a32;
+    height: 118.5rem;
+    top: 0;
+    left: -100%;
+    transition: 350ms;
+    position: fixed;
+    z-index: 10;
+    width: 20rem;
+    display: flex;
+}
+/* .cName{
+    background-color: aliceblue;
+} */
+
 .icon{
     width: 9rem;
     height: 5rem;
     font-size: 20rem;
     
 }
-.nav__item{
-    padding: 1rem;
+.nav_item{
+   /*  padding: 1rem;
     padding-left: 3rem;
-    padding-right: 9rem;
-    cursor: pointer;
+    padding-right: 9rem; */
+   /*  cursor: pointer;
     display: flex;
-    align-items: center;
-    transition: all .2s;
-    color: white;
+    align-items: center; */
+    /* transition: all .2s; */
+    background-color: #f5f7ff;
     text-decoration: none;
 }
 
@@ -40,12 +68,12 @@
 }
 
 .nav__icon {
-    margin-right: 1rem;
     color: white;
     transition: 0.2s;
+    margin-right: 2rem;
 }
 .nav__icon:hover {
-    margin-right: 1rem;
+   /*  margin-right: 1rem; */
     color: var(--blue);
     transition: 0.2s;
 }
@@ -74,8 +102,12 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* margin-top: 20rem; */
     margin-top: 20rem;
-    margin-left: 5.5rem;
+    margin-left: 1.5rem;
+}
+.section{
+    display: flex;
 }
 .name{
     display: flex;
@@ -90,9 +122,6 @@
 }
 .listas{
     text-decoration: none;
-    list-style: none;
-}
-.nav_ul > li {
     list-style: none;
 }
 .linkStyle{
@@ -138,6 +167,10 @@
     list-style: none;
 }
 
+.liItems{
+    display: flex;
+    justify-content: center;
+}
 @media (max-width : 1024px){
     .nav_ul{
         display: flex;
