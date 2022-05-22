@@ -1,16 +1,27 @@
-import First from '../../utils/images/hotel.jpg';
-import Second from '../../utils/images/Avengers.jpg';
-import Third from '../../utils/images/batman2.jpg';
-
+import Primero from '../../utils/images/hotel.jpg';
+import Segundo from '../../utils/images/Avengers.jpg';
+import Tercero from '../../utils/images/batman2.jpg';
+import Cuarto from '../../utils/images/spiderman3.jpg'
+import Quinto from '../../utils/images/Souls.png';
+import Sexto from '../../utils/images/capitan.jpg'
 
 export default [
     {
-      urls: First,
+      urls: Primero,
     },
     {
-      urls: Second,
+      urls: Segundo,
     },
     {
-      urls: Third,
+      urls: Tercero,
     },
+    {
+      urls : Cuarto,
+    },
+    {
+      urls : Quinto,
+    },
+    {
+      urls : Sexto
+    }
   ];
