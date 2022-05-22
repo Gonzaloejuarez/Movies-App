@@ -2,9 +2,12 @@ import React, {useState} from 'react';
 import styled from 'styled-components';
 import styles from './Inicio.module.css';
 
-let props = {
-	images: [],
-}
+/* Props {
+	images: string[];
+	autoPlay?: boolean;
+	showButtons?: boolean;
+} */
+  
 
 export const InicioComponente = (props) => {
 const images = ["Avengers.jpg", "hotel.jpg" , "Souls.png" , "batman2.jpg", "spiderman3.jpg"]
@@ -41,8 +44,8 @@ const sig = () => {
 		 src={require(`../utils/images/${selectedImagen}`) } 
 		 alt='imagen'/>
 		 <CarouselButtonContainer>
-		 {/* <CarouselButton onClick={previo}>{"<"}</CarouselButton>
-		 <CarouselButton onClick={sig}>{">"}</CarouselButton> */}
+		 <CarouselButton onClick={previo}>{"<"}</CarouselButton>
+		 <CarouselButton onClick={sig}>{">"}</CarouselButton>
 		 </CarouselButtonContainer>
 			</section>
 		</div>

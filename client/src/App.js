@@ -5,7 +5,7 @@ import {  MoviesProvider } from './config/app_config';
 import { getMovies } from './config/config';
 
 //importaciones de componentes
-import InicioComponente from './Components/Inicio';
+import Carrousel from './Components/Carrousel/Carrousel';
 import Search from './Components/Search/Search';
 import Home from './Components/Home';
 import Nav from './Components/Nav/Nav';
@@ -34,7 +34,7 @@ function App() {
           <div>
         <Switch>
           <Route exact path="/">
-          <InicioComponente />
+          <Carrousel />
           <section className={style.sectionHome}>
             <img src={Pelicugon} />
           <Search handleSearch={handleSearch}/>
